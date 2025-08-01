@@ -1,15 +1,28 @@
 <?php
-$radius = 25; // radius is an integer
-$pi = 3.14; // pi is a float
+$peopleOne = ['Jule', 'Oumar', 'Babi']; // declare an array of type string
+//echo $peopleOne[2]; // 'Babi'
 
-// increment and decrement operators
-//echo $radius++; // post-increment result:25
-//echo $radius;  // result: 26
-//echo ++$radius; // pre-increment result: 27
+$peopleTwo = array('Ouz', 'Racky', 'Malick', 'Demba');
+//echo $peopleTwo[1]; // 'Racky'
 
-// number functions
-echo floor($pi); // 3
-echo ceil($pi); // 4
+$ages = [20, 30, 40, 50];
+//print_r($ages); // allows you to see what's in an array
+
+// modify an element inside an array
+$ages[0] = 10;
+//echo $ages[0];
+
+// add a new value in an array
+array_push($ages, 100);
+//print_r($ages);
+
+// ouput the numbers of elements inside an array
+//echo count($ages);
+
+// associative arrays (key & value pairs)
+$peopleAges = ['Jule' => 20, 'Racky' => 22, 'Oumar' => 19];
+// output Jule's age
+echo $peopleAges['Jule'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
