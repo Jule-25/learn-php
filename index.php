@@ -1,26 +1,15 @@
 <?php
-$stringOne = 'my name is ';
-$stringTwo = 'Jule';
+$radius = 25; // radius is an integer
+$pi = 3.14; // pi is a float
 
-//echo $stringOne . $stringTwo; // concatenate the two strings
+// increment and decrement operators
+//echo $radius++; // post-increment result:25
+//echo $radius;  // result: 26
+//echo ++$radius; // pre-increment result: 27
 
-$age = 20;
-//echo 'Hey i am ' . $age . 'years old'; 
-//echo "Hey i am $age years old";
-
-// using an escape character to output a quote
-//echo "And then i said \"You don't know me\"";
-
-// accessing the first element in an array
-$name = 'Jule';
-//echo $name[0]; // 'J'
-
-// using string functions
-//echo strlen($name); // find the length of the string name
-//echo strtoupper($name); // uppercase all the characters in the string
-//echo strtolower($name); // lowercase all the characters in the string
-echo str_replace('J', 'A', $name); // replace the character 'J' in name by 'A'
-
+// number functions
+echo floor($pi); // 3
+echo ceil($pi); // 4
 ?>
 <!DOCTYPE html>
 <html lang="en">
