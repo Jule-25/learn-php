@@ -1,5 +1,8 @@
 <?php
-//'Hello World!';
+define('NAME', 'Jule'); // define a constant NAME
+$name = 'Jule'; // initialize the string variable name
+$age = 20; // initialize the int variable age
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +14,10 @@
 </head>
 
 <body>
-    <h1>
-        <?php echo 'Hello World!'; ?>
-    </h1>
+    <div>
+        <?php echo $name ?>
+        <?php echo $age ?>
+    </div>
 
 </body>
 
