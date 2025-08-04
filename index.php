@@ -1,28 +1,19 @@
 <?php
-$peopleOne = ['Jule', 'Oumar', 'Babi']; // declare an array of type string
-//echo $peopleOne[2]; // 'Babi'
+// multidimensional arrays
+$blogs = [
+    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
+    ['title' => 'mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
+    ['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+];
+print_r($blogs[1]['author']);
 
-$peopleTwo = array('Ouz', 'Racky', 'Malick', 'Demba');
-//echo $peopleTwo[1]; // 'Racky'
+// adding an element to the array
+$blogs = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 300];
 
-$ages = [20, 30, 40, 50];
-//print_r($ages); // allows you to see what's in an array
+// removing an element from the array
+$popped = array_pop($blogs);
 
-// modify an element inside an array
-$ages[0] = 10;
-//echo $ages[0];
-
-// add a new value in an array
-array_push($ages, 100);
-//print_r($ages);
-
-// ouput the numbers of elements inside an array
-//echo count($ages);
-
-// associative arrays (key & value pairs)
-$peopleAges = ['Jule' => 20, 'Racky' => 22, 'Oumar' => 19];
-// output Jule's age
-echo $peopleAges['Jule'];
+print_r($popped);
 ?>
 <!DOCTYPE html>
 <html lang="en">
