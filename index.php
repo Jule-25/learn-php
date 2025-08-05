@@ -1,18 +1,10 @@
 <?php
+// include and require
 
-// functions
-function sayHello($name = 'Jule')
-{
-    echo 'good morning ' . $name;
-}
-//sayHello('Oumar');
+//include('names.php');
+require('names.php');
 
-function formatProduct($product)
-{
-    return "{$product['name']} costs £{$product['price']} to buy <br />";
-}
-echo formatProduct(['name' => 'apple', 'price' => 10]);
-
+echo 'end of php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
