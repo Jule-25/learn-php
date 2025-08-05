@@ -8,9 +8,7 @@ $email = $title = $ingredients = '';
 $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
 
 if (isset($_POST['submit'])) {
-    //echo htmlspecialchars($_POST['email']);
-    //echo htmlspecialchars($_POST['title']);
-    // echo htmlspecialchars($_POST['ingredients']);
+    // check email
     if (empty($_POST['email'])) {
         $errors['email'] = 'An email is required <br />';
     } else {
@@ -19,6 +17,8 @@ if (isset($_POST['submit'])) {
             $errors['email'] = 'Email must be a valid email address';
         }
     }
+
+    // check title
     if (empty($_POST['title'])) {
         $errors['title'] = 'A title is required <br />';
     } else {
@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
+    // check ingredients
     if (empty($_POST['ingredients'])) {
         $errors['ingredients'] = 'At least one ingredient is required <br />';
     } else {
@@ -36,13 +37,21 @@ if (isset($_POST['submit'])) {
             $errors['ingedrients'] = 'Ingredients must be a comma separated list <br/>';
         }
     }
+
+    // check for errors
+    if (array_filter($errors)) {
+        echo 'errors in the form';
+    } else {
+       header('Location')
+    }
+
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("header.php"); ?>
+<?php include("templates/header.php"); ?>
 
 <section class="container grey-text">
     <h4 class="center">Add a Pizza</h4>
@@ -62,7 +71,7 @@ if (isset($_POST['submit'])) {
     </form>
 </section>
 
-<?php include("footer.php") ?>
+<?php include("templates/footer.php") ?>
 
 
 </html>
