@@ -1,19 +1,31 @@
 <?php
-// multidimensional arrays
-$blogs = [
-    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
-    ['title' => 'mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
-    ['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+// loops
+
+$names = ['Oumar', 'Ibrahim', 'David'];
+//for ($i = 0; $i < count($names); $i++) {
+//  echo $names[$i] . '<br \>';
+//}
+//foreach ($names as $name) {
+//   echo $name . '<br />';
+//}
+
+$products = [
+    ['name' => 'mangoe', 'price' => 300],
+    ['name' => 'orange', 'price' => 200],
+    ['name' => 'apple', 'price' => 100]
 ];
-print_r($blogs[1]['author']);
+//foreach ($products as $product) {
+//    echo $product['name'] . '<br />';
+//}
 
-// adding an element to the array
-$blogs = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 300];
+//$i = 0;
+//while ($i < count($products)) {
+//    echo $products[$i]['name'] . '<br />';
+//    $i++;
+//}
 
-// removing an element from the array
-$popped = array_pop($blogs);
 
-print_r($popped);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +37,11 @@ print_r($popped);
 </head>
 
 <body>
-
+    <h1>products</h1>
+    <?php foreach ($products as $product) { ?>
+        <h3><?php echo $product['name'] ?></h3>
+        <p>&dollar;<?php echo $product['price'] ?></p>
+    <?php } ?>
 </body>
 
 </html>
