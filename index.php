@@ -1,25 +1,17 @@
 <?php
-// conditional statements
-//$age = 20;
-//if ($age <= 10) {
-//    echo 'You are a kid';
-//} else if ($age > 10 && $age < 20) {
-//    echo 'You are a teenager';
-//} else {
-//    echo 'You are an adult';
-//}
 
-$products = [
-    ['name' => 'mangoe', 'price' => 300],
-    ['name' => 'orange', 'price' => 10],
-    ['name' => 'apple', 'price' => 13]
-];
+// functions
+function sayHello($name = 'Jule')
+{
+    echo 'good morning ' . $name;
+}
+//sayHello('Oumar');
 
-//foreach ($products as $product) {
-//    if ($product['price'] < 15) {
-//        echo $product['name'] . '<br />';
-//    }
-//}
+function formatProduct($product)
+{
+    return "{$product['name']} costs £{$product['price']} to buy <br />";
+}
+echo formatProduct(['name' => 'apple', 'price' => 10]);
 
 ?>
 <!DOCTYPE html>
@@ -32,17 +24,7 @@ $products = [
 </head>
 
 <body>
-    <div>
-        <ul>
-            <?php foreach ($products as $product) { ?>
-                <?php if ($product['price'] < 15) { ?>
-                    <li>
-                        <?php echo $product['name'] ?>
-                    </li>
-                <?php } ?>
-            <?php } ?>
-        </ul>
-    </div>
+
 </body>
 
 </html>
