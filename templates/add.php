@@ -20,13 +20,19 @@ if (isset($_POST['submit'])) {
     if (empty($_POST['title'])) {
         echo 'A title is required <br />';
     } else {
-        echo htmlspecialchars($_POST['title']);
+        $title = $_POST['title'];
+        if (!preg_match('/^[a-zA-Z\s]+$/', $title)) {
+            echo 'Title must be letters and spaces only <br/>';
+        }
     }
 
     if (empty($_POST['ingredients'])) {
-        echo 'ingredients is required <br />';
+        echo 'At least one ingredient is required <br />';
     } else {
-        echo htmlspecialchars($_POST['ingredients']);
+        $ingredients = $_POST['ingredients'];
+        if (!preg_match('/(^[a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
+            echo 'Ingredients must be a comma separated list <br/>';
+        }
     }
 }
 
