@@ -1,9 +1,4 @@
 <?php
-//if (isset($_GET['submit'])) {
-//    echo $_GET['email'];
-//    echo $_GET['title'];
-//    echo $_GET['ingredients'];
-//}
 $email = $title = $ingredients = '';
 $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
 
@@ -42,7 +37,7 @@ if (isset($_POST['submit'])) {
     if (array_filter($errors)) {
         echo 'errors in the form';
     } else {
-       header('Location')
+        header('Location: index.php');
     }
 
 }
