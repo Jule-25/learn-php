@@ -1,30 +1,25 @@
 <?php
-// loops
-
-$names = ['Oumar', 'Ibrahim', 'David'];
-//for ($i = 0; $i < count($names); $i++) {
-//  echo $names[$i] . '<br \>';
-//}
-//foreach ($names as $name) {
-//   echo $name . '<br />';
+// conditional statements
+//$age = 20;
+//if ($age <= 10) {
+//    echo 'You are a kid';
+//} else if ($age > 10 && $age < 20) {
+//    echo 'You are a teenager';
+//} else {
+//    echo 'You are an adult';
 //}
 
 $products = [
     ['name' => 'mangoe', 'price' => 300],
-    ['name' => 'orange', 'price' => 200],
-    ['name' => 'apple', 'price' => 100]
+    ['name' => 'orange', 'price' => 10],
+    ['name' => 'apple', 'price' => 13]
 ];
+
 //foreach ($products as $product) {
-//    echo $product['name'] . '<br />';
+//    if ($product['price'] < 15) {
+//        echo $product['name'] . '<br />';
+//    }
 //}
-
-//$i = 0;
-//while ($i < count($products)) {
-//    echo $products[$i]['name'] . '<br />';
-//    $i++;
-//}
-
-
 
 ?>
 <!DOCTYPE html>
@@ -37,11 +32,17 @@ $products = [
 </head>
 
 <body>
-    <h1>products</h1>
-    <?php foreach ($products as $product) { ?>
-        <h3><?php echo $product['name'] ?></h3>
-        <p>&dollar;<?php echo $product['price'] ?></p>
-    <?php } ?>
+    <div>
+        <ul>
+            <?php foreach ($products as $product) { ?>
+                <?php if ($product['price'] < 15) { ?>
+                    <li>
+                        <?php echo $product['name'] ?>
+                    </li>
+                <?php } ?>
+            <?php } ?>
+        </ul>
+    </div>
 </body>
 
 </html>
